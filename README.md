@@ -131,7 +131,7 @@ python -m spacy download en_core_web_sm
 
 Made with 💻 by [Rohit Jena]
 
-- 💼 [LinkedIn]([https://www.linkedin.com/in/rohitjena2526])
+- 💼 [LinkedIn](https://www.linkedin.com/in/rohitjena2526)
 - 🐱 [GitHub](https://github.com/RohitJena1075)
 - 📧 r.jena1075@gmail.com
 
