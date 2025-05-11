@@ -103,3 +103,40 @@ smart_resume_parser/
 ```
 
 ---
+## ☁️ Deployment (Render)
+
+### 🛠 Steps:
+
+1. Push your code to GitHub
+2. Create a new Web Service on [Render](https://render.com)
+3. Use `run.py` as entry point
+4. Add a `render-build.sh` to download spaCy model:
+
+```bash
+#!/usr/bin/env bash
+python -m spacy download en_core_web_sm
+```
+
+5. Set build command in Render:
+
+```
+./render-build.sh && pip install -r requirements.txt
+```
+
+6. ✅ Done!
+
+---
+
+## 🙋 Contact
+
+Made with 💻 by [Rohit Jena]
+
+- 💼 [LinkedIn](www.linkedin.com/in/rohitjena2526)
+- 🐱 [GitHub]([https://github.com/yourusername](https://github.com/RohitJena1075)
+- 📧 r.jena1075@gmail.com
+
+---
+
+## 📃 License
+
+MIT License
