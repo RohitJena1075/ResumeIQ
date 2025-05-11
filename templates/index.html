@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ResumeIQ - Smart Parser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .card-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .footer-icons i {
+      font-size: 24px;
+      margin-right: 15px;
+      color: #0d6efd;
+    }
+    .footer-icons i:hover {
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5 mb-5">
+    <div class="text-center">
+      <h1 class="fw-bold">Welcome to <span class="text-primary">ResumeIQ</span></h1>
+      <p class="text-muted">Upload your resume, get instant AI-powered insights & skill-based scoring.</p>
+    </div>
+
+    <!-- Upload Form -->
+    <div class="card p-4 shadow mt-4">
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label class="form-label">Upload Resume (.pdf or .docx)</label>
+          <input type="file" name="resume" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Paste Job Description or Keywords</label>
+          <textarea name="keywords" class="form-control" rows="4" placeholder="e.g. Python, Machine Learning, SQL..." required></textarea>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" formaction="/upload" class="btn btn-success">Generate AI Insight</button>
+        </div>
+
+        <div class="d-grid mt-3">
+          <a href="/dashboard" class="btn btn-success">📊 View Dashboard</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- What We Analyze Section -->
+    <div class="mt-5">
+      <h3 class="text-center mb-4">🔍 What We Analyze</h3>
+      <div class="card-section">
+        <div class="card p-3 shadow-sm">
+          <h6>📌 Skills Match</h6>
+          <p class="text-muted">Analyzes skills from resume vs. job description</p>
+        </div>
+        <div class="card p-3 shadow-sm">
+          <h6>📊 Experience Alignment</h6>
+          <p class="text-muted">Evaluates relevant job experience with semantic similarity</p>
+        </div>
+        <div class="card p-3 shadow-sm">
+          <h6>💡 AI-Powered Summary</h6>
+          <p class="text-muted">Summarizes key qualifications from your resume</p>
+        </div>
+        <div class="card p-3 shadow-sm">
+          <h6>📈 Match Score</h6>
+          <p class="text-muted">Ranks resume using AI similarity against role</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Me Footer -->
+    <footer class="mt-5 pt-4 border-top text-center">
+      <p class="mb-1">Made with ❤️ by Rohit Jena</p>
+      <div class="footer-icons">
+        <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:your.email@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FontAwesome (for icons) -->
+  <script src="https://kit.fontawesome.com/0c552a6712.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
