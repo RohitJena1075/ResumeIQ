@@ -1,6 +1,14 @@
-flask
-python-docx
+Flask
+Flask-Cors
+Flask-Mail
+Flask-SQLAlchemy
+sentence-transformers
+transformers
+torch
+spacy
 PyPDF2
+python-docx
+reportlab
 cohere
 python-dotenv
 
